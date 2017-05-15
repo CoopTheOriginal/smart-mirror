@@ -1,8 +1,8 @@
 {
-  'intent': 'What is the weather today Jarvis',
+  'intent': 'summary',
   'response': 'The weather is amazing',
   'name': 'Jorge',
-  'request': 'summary',
+  'request': 'What is the weather today Jarvis',
 
   'data': {
     'weather_high_temp': 80,
