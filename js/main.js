@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   // Date and Time
   var months = ['January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'];
@@ -41,10 +42,11 @@ $(document).ready(function () {
   });
 
   var channel = pusher.subscribe('my-channel');
-  channel.bind('my-event', function(data) {
-
-    $('#intent').text(data.intent)
-    $('#response').text(data.response)
+  channel.bind('my-event', function(response_obj) {
+    data = response_obj.data
+    $('#intent').text(response_obj.intent)
+    $('#response').text(response_obj.response)
+    $('#name').text(response_obj.name)
 
     $('#weatherHighTemp').text(data.weather_high_temp)
     $('#weatherLowTemp').text(data.weather_high_temp)
@@ -65,13 +67,12 @@ $(document).ready(function () {
 
   function weatherConditions(condition) {
     var image = condition === 'sunny' ? 'sunny' : 'rainy'
-    return 'css/images' + image + '.png'
+    return 'css/images/' + image + '.png'
   };
 
   function weatherWindDirection(condition) {
     var image = condition === 'north' ? 'north' : 'south'
-    return 'css/images' + image + '.png'
+    return 'css/images/' + image + '.png'
   };
-
 
 });
