@@ -1,0 +1,20 @@
+{
+  'intent': 'What is the weather today Jarvis',
+  'response': 'The weather is amazing',
+
+  'weather_high_temp': 80,
+  'weather_low_temp': 70,
+  'weather_conditions': 'sunny',
+  'weather_wind_speed': '10',
+  'weather_wind_direction': 'north',
+
+  'reminder_type': 'birthday',
+  'reminder_title': "Mom's birthday",
+  'reminder_date': 'May 17th',
+  'reminder_time': '',
+
+  'traffic_conditions': 'jam',
+  'traffic_exptected_time': 20,
+  'traffic_usual_time': 10,
+  'traffic_alternative_route': 'Falls of Neuse Road to I-440'
+}

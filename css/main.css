@@ -1,0 +1,22 @@
+#date{
+  font-size: 2em;
+  line-height: .5em;
+  margin-left: 10px;
+}
+.unit{
+  font-size: 4em;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#ampm {
+  margin-left: 15px;
+}

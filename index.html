@@ -1,25 +1,74 @@
 <!DOCTYPE html>
 <head>
-  <title>Pusher Test</title>
-  <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
-  <script>
+  <!-- Basic Page Needs –––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Smart Mirror</title>
+  <meta name="description" content="Display for smart mirror">
+  <meta name="author" content="Alfred the Butler">
 
-    // Enable pusher logging - don't include this in production
-    Pusher.logToConsole = true;
+  <!-- Mobile Specific Metas ––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    var pusher = new Pusher('d1a2deaa33578d481a34', {
-      cluster: 'us2',
-      encrypted: true
-    });
+  <!-- FONT –––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-    var channel = pusher.subscribe('my-channel');
-    channel.bind('my-event', function(data) {
-      alert(data.message);
-    });
-  </script>
+  <!-- CSS ––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Favicon ––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="css/images/alfred.jpg">
+
+
 </head>
 
 <body>
+  <div class="container">
+    <div class="row">
 
+      <div class="six columns">
+        <div class="row">
+          <span class="unit" id="hours"></span>
+          <span class="unit" id="semi">:</span>
+          <span class="unit" id="minutes"></span>
+          <span class="unit" id="semi">:</span>
+          <span class="unit" id="seconds"></span>
+          <span class="unit" id="ampm"></span>
+        </div>
+        <div class="row">
+          <span id="date"></span>
+        </div>
+      </div>
+
+      <div class="six columns right">
+        <div class="row" style="margin-top: 4%">
+          <img id="weatherConditions" src="css/images/rainy.png" width="100px">
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="ten columns">
+        <div class="row">
+          <div class="five columns" id="intent">
+            YOU: Insert what was said here
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="five columns right" id="response">
+          Insert the short form response here :BUTLER
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
